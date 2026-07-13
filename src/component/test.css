@@ -1,0 +1,241 @@
+/* Base Reset & Variables */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* App Container */
+.app-container {
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  background-color: rgba(22, 22, 22, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid #27272a;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-logo {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.nav-links a {
+  color: #a1a1aa;
+  text-decoration: none;
+  font-size: 0.875rem;
+  margin-left: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+/* Main Layout */
+.main-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.main-content > * + * {
+  margin-top: 4rem;
+}
+
+/* Header */
+.hero-header h2 {
+  font-size: 2.25rem;
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.hero-header p {
+  color: #a1a1aa;
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 36rem;
+}
+
+/* Form Card */
+.form-card {
+  background-color: #1c1c1c;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(39, 39, 42, 0.6);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.form-card h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.entry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #71717a;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: #121212;
+  border: 1px solid #27272a;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #52525b;
+}
+
+.form-group textarea {
+  height: 7rem;
+  resize: none;
+}
+
+.submit-btn {
+  align-self: flex-start;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.submit-btn:hover {
+  background-color: #e4e4e7;
+}
+
+.submit-btn:active {
+  transform: scale(0.97);
+}
+
+/* Feed Section */
+.feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #27272a;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.feed-header h3 {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.badge {
+  font-size: 0.75rem;
+  background-color: #27272a;
+  color: #a1a1aa;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-msg {
+  color: #71717a;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+/* Feed Grid */
+.feed-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .feed-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.feed-card {
+  background-color: #161616;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(39, 39, 42, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.3s ease;
+}
+
+.feed-card:hover {
+  border-color: rgba(63, 63, 70, 0.6);
+}
+
+.feed-card h4 {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.feed-card p {
+  color: #a1a1aa;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.card-date {
+  font-size: 0.625rem;
+  color: #52525b;
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

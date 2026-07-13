@@ -1,0 +1,38 @@
+.auth-box {
+  width: 350px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.15);
+  background: white;
+}
+
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-box input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.auth-box button {
+  padding: 12px;
+  background: #3ECF8E;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.auth-box button:hover {
+  background: #32b97d;
+}
