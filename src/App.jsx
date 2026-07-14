@@ -40,7 +40,7 @@ import NewDashboard from "./component/NewDashboard"
     <>
     
     <Test/>
-    <NewDashboard/>
+    
 
 
     

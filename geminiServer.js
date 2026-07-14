@@ -21,6 +21,10 @@ const supabase = createClient(supabaseUrl, supabaseKey);
  * GET /api/items
  * Fetches entries, ordered newest first to match frontend layout requirements
  */
+
+app.get('/', async (req, res) => {
+  res.send('Welcome to the Gemini Server! Use /api/items to interact with the database. Bro u r late to come here');
+});
 app.get('/api/items', async (req, res) => {
   try {
     const { data, error } = await supabase

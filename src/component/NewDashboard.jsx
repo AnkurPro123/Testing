@@ -9,7 +9,7 @@ export default function Dashboard() {
   // 1. Fetch live data straight from your Express Supabase endpoint
   const fetchDashboardData = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/items');
+      const res = await fetch('https://testing-078r.onrender.com/api/items');
       if (!res.ok) throw new Error('Backend failed to respond');
       
       const data = await res.json();
