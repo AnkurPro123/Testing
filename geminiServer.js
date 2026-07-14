@@ -23,7 +23,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
  */
 
 app.get('/', async (req, res) => {
-  res.send('Welcome to the Gemini Server! Use /api/items to interact with the database. Bro u r late to come here');
+  res.send('Welcome to the Gemini Server! Use /api/items to interact with the database. Bro u r late to come here, it updated now, beo');
 });
 app.get('/api/items', async (req, res) => {
   try {
